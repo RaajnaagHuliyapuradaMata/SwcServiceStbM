@@ -1,0 +1,2 @@
+# StbM
+Standby manager submodule
