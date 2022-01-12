@@ -2,6 +2,6 @@
 
 class_StbM StbM;
 
-void class_StbM::InitFunction(void){
+FUNC(void, STBM_CODE) class_StbM::InitFunction(void){
 }
 
