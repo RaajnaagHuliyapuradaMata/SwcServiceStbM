@@ -1,20 +1,18 @@
+#pragma once
 /*****************************************************/
-/* File   : StbM.cpp                                 */
+/* File   : StbM_SchM.h                              */
 /* Author : Naagraaj HM                              */
 /*****************************************************/
 
 /*****************************************************/
 /* #INCLUDES                                         */
 /*****************************************************/
-#include "StbM.h"
+#include "Compiler_Cfg_StbM.h"
 
-#include "StbM_EcuM.h"
-#include "StbM_SchM.h"
+#include "SchM_Client.h"
 
 /*****************************************************/
 /* #DEFINES                                          */
-/*****************************************************/
-
 /*****************************************************/
 
 /*****************************************************/
@@ -24,6 +22,13 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
+class class_StbM_SchM : public class_SchM_Client{
+   public:
+/*****************************************************/
+/* FUNCTIONS                                         */
+/*****************************************************/
+      FUNC(void, STBM_CODE) MainFunction(void);
+};
 
 /*****************************************************/
 /* CONSTS                                            */
@@ -36,20 +41,7 @@
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-class_StbM_EcuM StbM_EcuM;
-class_EcuM_Client *EcuM_Client_ptr_StbM = &StbM_EcuM;
-class_StbM_SchM StbM_SchM;
-class_SchM_Client *SchM_Client_ptr_StbM = &StbM_SchM;
-class_StbM StbM;
-
-/*****************************************************/
-/* FUNCTIONS                                         */
-/*****************************************************/
-FUNC(void, STBM_CODE) class_StbM_EcuM::InitFunction(void){
-}
-
-FUNC(void, STBM_CODE) class_StbM_SchM::MainFunction(void){
-}
+extern class_SchM_Client *SchM_Client_ptr_StbM;
 
 /*****************************************************/
 /* EOF                                               */
