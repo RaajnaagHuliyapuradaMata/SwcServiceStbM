@@ -36,19 +36,20 @@
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-class_StbM_EcuM StbM_EcuM;
-class_EcuM_Client *EcuM_Client_ptr_StbM = &StbM_EcuM;
-class_StbM_SchM StbM_SchM;
-class_SchM_Client *SchM_Client_ptr_StbM = &StbM_SchM;
+class_StbM_EcuM_Init StbM_EcuM_Init;
+class_StbM_SchM_Main StbM_SchM_Main;
 class_StbM StbM;
+
+class_EcuM_Init_Client *EcuM_Init_Client_ptr_StbM = &StbM_EcuM_Init;
+class_SchM_Main_Client *SchM_Main_Client_ptr_StbM = &StbM_SchM_Main;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-FUNC(void, STBM_CODE) class_StbM_EcuM::InitFunction(void){
+FUNC(void, STBM_CODE) class_StbM_EcuM_Init::InitFunction(void){
 }
 
-FUNC(void, STBM_CODE) class_StbM_SchM::MainFunction(void){
+FUNC(void, STBM_CODE) class_StbM_SchM_Main::MainFunction(void){
 }
 
 /*****************************************************/
