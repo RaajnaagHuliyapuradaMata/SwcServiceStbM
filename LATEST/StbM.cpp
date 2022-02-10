@@ -6,15 +6,12 @@
 /*****************************************************/
 /* #INCLUDES                                         */
 /*****************************************************/
-#include "StbM.h"
+#include "module.h"
 
-#include "StbM_EcuM.h"
-#include "StbM_SchM.h"
+#include "StbM_Unused.h"
 
 /*****************************************************/
 /* #DEFINES                                          */
-/*****************************************************/
-
 /*****************************************************/
 
 /*****************************************************/
@@ -24,6 +21,12 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
+class module_StbM : public class_module{
+   public:
+      FUNC(void, STBM_CODE) InitFunction   (void);
+      FUNC(void, STBM_CODE) DeInitFunction (void);
+      FUNC(void, STBM_CODE) MainFunction   (void);
+};
 
 /*****************************************************/
 /* CONSTS                                            */
@@ -36,20 +39,18 @@
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-class_StbM_EcuM_Init StbM_EcuM_Init;
-class_StbM_SchM_Main StbM_SchM_Main;
-class_StbM StbM;
+module_StbM StbM;
 
-class_EcuM_Init_Client *EcuM_Init_Client_ptr_StbM = &StbM_EcuM_Init;
-class_SchM_Main_Client *SchM_Main_Client_ptr_StbM = &StbM_SchM_Main;
+class_EcuM_Client *EcuM_Client_ptr_StbM = &StbM;
+class_SchM_Client *SchM_Client_ptr_StbM = &StbM;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-FUNC(void, STBM_CODE) class_StbM_EcuM_Init::InitFunction(void){
+FUNC(void, STBM_CODE) module_StbM::InitFunction(void){
 }
 
-FUNC(void, STBM_CODE) class_StbM_SchM_Main::MainFunction(void){
+FUNC(void, STBM_CODE) module_StbM::MainFunction(void){
 }
 
 /*****************************************************/
