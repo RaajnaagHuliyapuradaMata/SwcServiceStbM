@@ -41,8 +41,8 @@ class module_StbM : public class_module{
 /*****************************************************/
 module_StbM StbM;
 
-class_EcuM_Client *EcuM_Client_ptr_StbM = &StbM;
-class_SchM_Client *SchM_Client_ptr_StbM = &StbM;
+//class_EcuM_Client *EcuM_Client_ptr_StbM = &StbM;
+//class_SchM_Client *SchM_Client_ptr_StbM = &StbM;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
