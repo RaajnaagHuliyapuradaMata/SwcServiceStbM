@@ -27,7 +27,8 @@ class interface_StbM_EcuM : public interface_EcuM_Client{
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-      FUNC(void, STBM_CODE) InitFunction(void);
+      virtual FUNC(void, STBM_CODE) InitFunction   (void) = 0;
+      virtual FUNC(void, STBM_CODE) DeInitFunction (void) = 0;
 };
 
 /*****************************************************/
