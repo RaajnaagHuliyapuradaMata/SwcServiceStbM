@@ -24,8 +24,6 @@
 /*****************************************************/
 class module_StbM:
       public abstract_module
-   ,  public interface_StbM_EcuM
-   ,  public interface_StbM_SchM
 {
    public:
       FUNC(void, STBM_CODE) InitFunction   (void);
@@ -44,10 +42,9 @@ class module_StbM:
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-module_StbM StbM;
-
-interface_StbM_EcuM *EcuM_Client_ptr_StbM = &StbM;
-interface_StbM_SchM *SchM_Client_ptr_StbM = &StbM;
+module_StbM    StbM;
+infEcuMClient* gptrinfEcuMClient_StbM = &StbM;
+infSchMClient* gptrinfSchMClient_StbM = &StbM;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
