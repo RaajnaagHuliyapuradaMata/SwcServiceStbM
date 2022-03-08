@@ -32,7 +32,7 @@
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-extern interface_StbM_SchM *SchM_Client_ptr_StbM;
+extern infSchMClient *gptrinfSchMClient_StbM;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
