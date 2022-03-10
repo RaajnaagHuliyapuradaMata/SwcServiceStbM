@@ -7,8 +7,8 @@
 /* #INCLUDES                                         */
 /*****************************************************/
 #include "module.h"
-#include "StbM_EcuM.h"
-#include "StbM_SchM.h"
+#include "infStbM_EcuM.h"
+#include "infStbM_SchM.h"
 #include "StbM_Unused.h"
 
 /*****************************************************/
@@ -28,6 +28,7 @@ class module_StbM:
    public:
       FUNC(void, STBM_CODE) InitFunction   (void);
       FUNC(void, STBM_CODE) DeInitFunction (void);
+      FUNC(void, STBM_CODE) GetVersionInfo (void);
       FUNC(void, STBM_CODE) MainFunction   (void);
 };
 
@@ -44,6 +45,7 @@ class module_StbM:
 /*****************************************************/
 module_StbM    StbM;
 infEcuMClient* gptrinfEcuMClient_StbM = &StbM;
+infDcmClient*  gptrinfDcmClient_StbM  = &StbM;
 infSchMClient* gptrinfSchMClient_StbM = &StbM;
 
 /*****************************************************/
@@ -53,6 +55,9 @@ FUNC(void, STBM_CODE) module_StbM::InitFunction(void){
 }
 
 FUNC(void, STBM_CODE) module_StbM::DeInitFunction(void){
+}
+
+FUNC(void, STBM_CODE) module_StbM::GetVersionInfo(void){
 }
 
 FUNC(void, STBM_CODE) module_StbM::MainFunction(void){
