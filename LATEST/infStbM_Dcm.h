@@ -1,15 +1,13 @@
+#pragma once
 /*****************************************************/
-/* File   : StbM.cpp                                 */
+/* File   : infStbM_Dcm.h                            */
 /* Author : Naagraaj HM                              */
 /*****************************************************/
 
 /*****************************************************/
 /* #INCLUDES                                         */
 /*****************************************************/
-#include "module.h"
-#include "infStbM_EcuM.h"
-#include "infStbM_Dcm.h"
-#include "infStbM_SchM.h"
+#include "Compiler_Cfg_StbM.h"
 
 /*****************************************************/
 /* #DEFINES                                          */
@@ -22,15 +20,6 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
-class module_StbM:
-      public abstract_module
-{
-   public:
-      FUNC(void, STBM_CODE) InitFunction   (void);
-      FUNC(void, STBM_CODE) DeInitFunction (void);
-      FUNC(void, STBM_CODE) GetVersionInfo (void);
-      FUNC(void, STBM_CODE) MainFunction   (void);
-};
 
 /*****************************************************/
 /* CONSTS                                            */
@@ -43,27 +32,11 @@ class module_StbM:
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-module_StbM    StbM;
-infEcuMClient* gptrinfEcuMClient_StbM = &StbM;
-infDcmClient*  gptrinfDcmClient_StbM  = &StbM;
-infSchMClient* gptrinfSchMClient_StbM = &StbM;
+extern infDcmClient* gptrinfDcmClient_StbM;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-FUNC(void, STBM_CODE) module_StbM::InitFunction(void){
-}
-
-FUNC(void, STBM_CODE) module_StbM::DeInitFunction(void){
-}
-
-FUNC(void, STBM_CODE) module_StbM::GetVersionInfo(void){
-}
-
-FUNC(void, STBM_CODE) module_StbM::MainFunction(void){
-}
-
-#include "StbM_Unused.h"
 
 /*****************************************************/
 /* EOF                                               */

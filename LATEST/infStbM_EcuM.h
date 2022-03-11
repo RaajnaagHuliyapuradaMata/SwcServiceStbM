@@ -1,6 +1,6 @@
 #pragma once
 /*****************************************************/
-/* File   : StbM_SchM.h                              */
+/* File   : infStbM_EcuM.h                           */
 /* Author : Naagraaj HM                              */
 /*****************************************************/
 
@@ -32,7 +32,7 @@
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-extern infSchMClient* gptrinfSchMClient_StbM;
+extern infEcuMClient* gptrinfEcuMClient_StbM;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
