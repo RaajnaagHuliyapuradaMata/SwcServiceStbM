@@ -7,7 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "module.h"
-#include "infStbM_Version.h"
+#include "StbM_Cfg.h"
 #include "infStbM_EcuM.h"
 #include "infStbM_Dcm.h"
 #include "infStbM_SchM.h"
@@ -15,10 +15,19 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
+#define STBM_AR_RELEASE_MAJOR_VERSION                                          4
+#define STBM_AR_RELEASE_MINOR_VERSION                                          3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
+#if(STBM_AR_RELEASE_MAJOR_VERSION != STD_AR_RELEASE_MAJOR_VERSION)
+   #error "Incompatible STBM_AR_RELEASE_MAJOR_VERSION!"
+#endif
+
+#if(STBM_AR_RELEASE_MINOR_VERSION != STD_AR_RELEASE_MINOR_VERSION)
+   #error "Incompatible STBM_AR_RELEASE_MINOR_VERSION!"
+#endif
 
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
@@ -61,6 +70,11 @@ FUNC(void, STBM_CODE) module_StbM::DeInitFunction(void){
 }
 
 FUNC(void, STBM_CODE) module_StbM::GetVersionInfo(void){
+#if(STD_ON == StbM_DevErrorDetect)
+//TBD: API parameter check
+   Det_ReportError(
+   );
+#endif
 }
 
 FUNC(void, STBM_CODE) module_StbM::MainFunction(void){
