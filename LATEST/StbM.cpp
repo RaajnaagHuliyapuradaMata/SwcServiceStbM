@@ -40,6 +40,16 @@ class module_StbM:
       FUNC(void, STBM_CODE) DeInitFunction (void);
       FUNC(void, STBM_CODE) GetVersionInfo (void);
       FUNC(void, STBM_CODE) MainFunction   (void);
+
+   private:
+      CONST(Std_TypeVersionInfo, STBM_CONST) VersionInfo = {
+            0x0000
+         ,  0xFFFF
+         ,  0x01
+         ,  '0'
+         ,  '1'
+         ,  '0'
+      };
 };
 
 /******************************************************************************/
