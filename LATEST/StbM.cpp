@@ -7,7 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "module.h"
-#include "StbM_Cfg.h"
+#include "CfgStbM.h"
 #include "infStbM_EcuM.h"
 #include "infStbM_Dcm.h"
 #include "infStbM_SchM.h"
