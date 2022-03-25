@@ -6,11 +6,11 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "module.h"
-#include "CfgStbM.h"
-#include "infStbM_EcuM.h"
-#include "infStbM_Dcm.h"
-#include "infStbM_SchM.h"
+#include "module.hpp"
+#include "CfgStbM.hpp"
+#include "infStbM_EcuM.hpp"
+#include "infStbM_Dcm.hpp"
+#include "infStbM_SchM.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -90,7 +90,7 @@ FUNC(void, STBM_CODE) module_StbM::GetVersionInfo(void){
 FUNC(void, STBM_CODE) module_StbM::MainFunction(void){
 }
 
-#include "StbM_Unused.h"
+#include "StbM_Unused.hpp"
 
 /******************************************************************************/
 /* EOF                                                                        */
