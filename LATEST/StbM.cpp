@@ -90,7 +90,9 @@ FUNC(void, STBM_CODE) module_StbM::GetVersionInfo(void){
 FUNC(void, STBM_CODE) module_StbM::MainFunction(void){
 }
 
-#include "StbM_Unused.hpp"
+class class_StbM_Unused{
+   public:
+};
 
 /******************************************************************************/
 /* EOF                                                                        */
