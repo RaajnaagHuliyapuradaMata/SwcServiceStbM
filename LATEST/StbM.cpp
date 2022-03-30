@@ -6,7 +6,7 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "module.hpp"
+#include "Module.hpp"
 #include "infStbM_EcuM.hpp"
 #include "infStbM_Dcm.hpp"
 #include "infStbM_SchM.hpp"
@@ -37,6 +37,9 @@ class module_StbM:
    public:
       module_StbM(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
       }
+      FUNC(void, _CODE) InitFunction(
+         CONSTP2CONST(CfgModule_TypeAbstract, _CONFIG_DATA, _APPL_CONST) lptrCfgModule
+      );
       FUNC(void, STBM_CODE) InitFunction   (void);
       FUNC(void, STBM_CODE) DeInitFunction (void);
       FUNC(void, STBM_CODE) MainFunction   (void);
@@ -73,7 +76,19 @@ VAR(module_StbM, STBM_VAR) StbM(
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
-FUNC(void, STBM_CODE) module_StbM::InitFunction(void){
+FUNC(void, STBM_CODE) module_StbM::InitFunction(
+   CONSTP2CONST(CfgStbM_Type, CFGSTBM_CONFIG_DATA, CFGSTBM_APPL_CONST) lptrCfgStbM
+){
+   if(NULL_PTR == lptrCfgStbM){
+#if(STD_ON == StbM_DevErrorDetect)
+      Det_ReportError(
+      );
+#endif
+   }
+   else{
+// check lptrCfgStbM for memory faults
+// use PBcfg_StbM as back-up configuration
+   }
    StbM.IsInitDone = E_OK;
 }
 
