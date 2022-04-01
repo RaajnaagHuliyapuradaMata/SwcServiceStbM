@@ -78,6 +78,7 @@ VAR(module_StbM, STBM_VAR) StbM(
 FUNC(void, STBM_CODE) module_StbM::InitFunction(
    CONSTP2CONST(CfgModule_TypeAbstract, STBM_CONFIG_DATA, STBM_APPL_CONST) lptrCfgModule
 ){
+#if(STD_ON == StbM_InitCheck)
    if(E_OK == IsInitDone){
 #if(STD_ON == StbM_DevErrorDetect)
       Det_ReportError(
@@ -85,6 +86,7 @@ FUNC(void, STBM_CODE) module_StbM::InitFunction(
 #endif
    }
    else{
+#endif
       if(NULL_PTR == lptrCfgModule){
 #if(STD_ON == StbM_DevErrorDetect)
          Det_ReportError(
@@ -96,10 +98,13 @@ FUNC(void, STBM_CODE) module_StbM::InitFunction(
 // use PBcfg_StbM as back-up configuration
       }
       IsInitDone = E_OK;
+#if(STD_ON == StbM_InitCheck)
    }
+#endif
 }
 
 FUNC(void, STBM_CODE) module_StbM::DeInitFunction(void){
+#if(STD_ON == StbM_InitCheck)
    if(E_OK != IsInitDone){
 #if(STD_ON == StbM_DevErrorDetect)
       Det_ReportError(
@@ -107,11 +112,26 @@ FUNC(void, STBM_CODE) module_StbM::DeInitFunction(void){
 #endif
    }
    else{
+#endif
       IsInitDone = E_NOT_OK;
+#if(STD_ON == StbM_InitCheck)
    }
+#endif
 }
 
 FUNC(void, STBM_CODE) module_StbM::MainFunction(void){
+#if(STD_ON == StbM_InitCheck)
+   if(E_OK != IsInitDone){
+#if(STD_ON == StbM_DevErrorDetect)
+      Det_ReportError(
+      );
+#endif
+   }
+   else{
+#endif
+#if(STD_ON == StbM_InitCheck)
+   }
+#endif
 }
 
 class class_StbM_Unused{
