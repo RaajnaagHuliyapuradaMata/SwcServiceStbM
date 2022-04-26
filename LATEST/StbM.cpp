@@ -31,8 +31,13 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class class_StbM_Functionality{
+   public:
+};
+
 class module_StbM:
       public abstract_module
+   ,  public class_StbM_Functionality
 {
    public:
       module_StbM(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
@@ -84,6 +89,10 @@ FUNC(void, STBM_CODE) module_StbM::InitFunction(
    if(E_OK == IsInitDone){
 #if(STD_ON == StbM_DevErrorDetect)
       Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
       );
 #endif
    }
@@ -92,6 +101,10 @@ FUNC(void, STBM_CODE) module_StbM::InitFunction(
       if(NULL_PTR == lptrCfgModule){
 #if(STD_ON == StbM_DevErrorDetect)
          Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
          );
 #endif
       }
@@ -116,6 +129,10 @@ FUNC(void, STBM_CODE) module_StbM::DeInitFunction(void){
    if(E_OK != IsInitDone){
 #if(STD_ON == StbM_DevErrorDetect)
       Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
       );
 #endif
    }
@@ -132,6 +149,10 @@ FUNC(void, STBM_CODE) module_StbM::MainFunction(void){
    if(E_OK != IsInitDone){
 #if(STD_ON == StbM_DevErrorDetect)
       Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
       );
 #endif
    }
@@ -141,10 +162,6 @@ FUNC(void, STBM_CODE) module_StbM::MainFunction(void){
    }
 #endif
 }
-
-class class_StbM_Unused{
-   public:
-};
 
 /******************************************************************************/
 /* EOF                                                                        */
