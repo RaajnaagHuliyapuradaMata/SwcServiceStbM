@@ -31,10 +31,6 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
-class class_StbM_Functionality{
-   public:
-};
-
 class module_StbM:
       public abstract_module
    ,  public class_StbM_Functionality
