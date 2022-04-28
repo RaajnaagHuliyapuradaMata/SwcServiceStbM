@@ -7,6 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "Module.hpp"
+#include "StbM_core.hpp"
 #include "infStbM_EcuM.hpp"
 #include "infStbM_Dcm.hpp"
 #include "infStbM_SchM.hpp"
