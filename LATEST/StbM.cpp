@@ -7,10 +7,9 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "Module.hpp"
+#include "CfgStbM.hpp"
 #include "StbM_core.hpp"
-#include "infStbM_EcuM.hpp"
-#include "infStbM_Dcm.hpp"
-#include "infStbM_SchM.hpp"
+#include "infStbM.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -44,6 +43,7 @@ class module_StbM:
       );
       FUNC(void, STBM_CODE) DeInitFunction (void);
       FUNC(void, STBM_CODE) MainFunction   (void);
+      STBM_CORE_FUNCTIONALITIES
 };
 
 extern VAR(module_StbM, STBM_VAR) StbM;
@@ -58,7 +58,6 @@ CONSTP2VAR(infSchMClient, STBM_VAR, STBM_CONST) gptrinfSchMClient_StbM = &StbM;
 /******************************************************************************/
 /* PARAMS                                                                     */
 /******************************************************************************/
-#include "CfgStbM.hpp"
 
 /******************************************************************************/
 /* OBJECTS                                                                    */
