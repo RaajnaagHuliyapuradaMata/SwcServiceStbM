@@ -113,7 +113,7 @@ FUNC(void, STBM_CODE) module_StbM::InitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  0 //TBD: IdError
+         ,  STBM_E_UNINIT
       );
 #endif
    }
@@ -133,7 +133,7 @@ FUNC(void, STBM_CODE) module_StbM::DeInitFunction(void){
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  0 //TBD: IdError
+         ,  STBM_E_UNINIT
       );
 #endif
    }
@@ -152,7 +152,7 @@ FUNC(void, STBM_CODE) module_StbM::MainFunction(void){
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  0 //TBD: IdError
+         ,  STBM_E_UNINIT
       );
 #endif
    }
