@@ -89,7 +89,10 @@ FUNC(void, STBM_CODE) module_StbM::InitFunction(
    CONSTP2CONST(CfgModule_TypeAbstract, STBM_CONFIG_DATA, STBM_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == StbM_InitCheck)
-   if(E_OK != IsInitDone){
+   if(
+         E_OK
+      != IsInitDone
+   ){
 #endif
       if(NULL_PTR != lptrCfgModule){
          if(STD_HIGH){
@@ -127,7 +130,10 @@ FUNC(void, STBM_CODE) module_StbM::InitFunction(
 
 FUNC(void, STBM_CODE) module_StbM::DeInitFunction(void){
 #if(STD_ON == StbM_InitCheck)
-   if(E_OK == IsInitDone){
+   if(
+         E_OK
+      == IsInitDone
+   ){
 #endif
 #if(STD_ON == StbM_InitCheck)
       IsInitDone = E_NOT_OK;
@@ -147,7 +153,10 @@ FUNC(void, STBM_CODE) module_StbM::DeInitFunction(void){
 
 FUNC(void, STBM_CODE) module_StbM::MainFunction(void){
 #if(STD_ON == StbM_InitCheck)
-   if(E_OK == IsInitDone){
+   if(
+         E_OK
+      == IsInitDone
+   ){
 #endif
 #if(STD_ON == StbM_InitCheck)
    }
