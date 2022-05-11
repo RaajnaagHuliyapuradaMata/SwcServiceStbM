@@ -9,7 +9,7 @@
 #include "Module.hpp"
 #include "CfgStbM.hpp"
 #include "StbM_core.hpp"
-#include "infStbM.hpp"
+#include "infStbM_Exp.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -32,6 +32,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_StbM:
+   INTERFACES_EXPORTED_STBM
       public abstract_module
    ,  public class_StbM_Functionality
 {
