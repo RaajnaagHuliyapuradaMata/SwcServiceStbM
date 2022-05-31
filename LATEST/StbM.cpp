@@ -32,7 +32,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_StbM:
-   INTERFACES_EXPORTED_STBM
+      INTERFACES_EXPORTED_STBM
       public abstract_module
    ,  public class_StbM_Functionality
 {
