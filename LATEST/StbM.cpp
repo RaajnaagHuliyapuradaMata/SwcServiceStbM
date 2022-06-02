@@ -72,6 +72,10 @@ CONSTP2VAR(infSchMClient, STBM_VAR, STBM_CONST) gptrinfSchMClient_StbM = &StbM;
 /******************************************************************************/
 VAR(module_StbM, STBM_VAR) StbM(
    {
+#if(STD_ON == _ReSIM)
+// char strModuleName[6];
+#else
+#endif
          STBM_AR_RELEASE_VERSION_MAJOR
       ,  STBM_AR_RELEASE_VERSION_MINOR
       ,  0x00
