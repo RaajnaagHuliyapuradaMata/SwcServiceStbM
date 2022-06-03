@@ -10,6 +10,7 @@
 #include "CfgStbM.hpp"
 #include "StbM_core.hpp"
 #include "infStbM_Exp.hpp"
+#include "infStbM_Imp.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
