@@ -130,7 +130,9 @@ FUNC(void, STBM_CODE) module_StbM::InitFunction(
 #endif
 }
 
-FUNC(void, STBM_CODE) module_StbM::DeInitFunction(void){
+FUNC(void, STBM_CODE) module_StbM::DeInitFunction(
+   void
+){
 #if(STD_ON == StbM_InitCheck)
    if(
          E_OK
@@ -153,7 +155,9 @@ FUNC(void, STBM_CODE) module_StbM::DeInitFunction(void){
 #endif
 }
 
-FUNC(void, STBM_CODE) module_StbM::MainFunction(void){
+FUNC(void, STBM_CODE) module_StbM::MainFunction(
+   void
+){
 #if(STD_ON == StbM_InitCheck)
    if(
          E_OK
