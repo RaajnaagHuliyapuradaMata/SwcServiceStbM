@@ -41,12 +41,8 @@ class module_StbM:
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-            Std_TypeReturn          IsInitDone{E_NOT_OK};
-      const CfgModule_TypeAbstract* lptrCfg{(CfgModule_TypeAbstract*)NULL_PTR};
 
    public:
-      module_StbM(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
-      }
       FUNC(void, STBM_CODE) InitFunction(
          CONSTP2CONST(CfgModule_TypeAbstract, STBM_CONFIG_DATA, STBM_APPL_CONST) lptrCfgModule
       );
@@ -71,18 +67,7 @@ CONSTP2VAR(infSchMClient, STBM_VAR, STBM_CONST) gptrinfSchMClient_StbM = &StbM;
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-VAR(module_StbM, STBM_VAR) StbM(
-   {
-         STBM_AR_RELEASE_VERSION_MAJOR
-      ,  STBM_AR_RELEASE_VERSION_MINOR
-      ,  0x00
-      ,  0xFF
-      ,  0x01
-      ,  '0'
-      ,  '1'
-      ,  '0'
-   }
-);
+VAR(module_StbM, STBM_VAR) StbM;
 
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
