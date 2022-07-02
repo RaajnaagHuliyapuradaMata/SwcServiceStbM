@@ -82,12 +82,7 @@ FUNC(void, STBM_CODE) module_StbM::InitFunction(
    ){
 #endif
       if(NULL_PTR != lptrCfgModule){
-         if(STD_HIGH){
-            lptrCfg = lptrCfgModule;
-         }
-         else{
-            lptrCfg = &PBcfgStbM;
-         }
+         lptrCfg = lptrCfgModule;
       }
       else{
 #if(STD_ON == StbM_DevErrorDetect)
