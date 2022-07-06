@@ -7,9 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "Module.hpp"
-#include "CfgStbM.hpp"
-#include "StbM_core.hpp"
-#include "infStbM_Exp.hpp"
+#include "StbM.hpp"
 #include "infStbM_Imp.hpp"
 
 /******************************************************************************/
@@ -32,26 +30,6 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
-class module_StbM:
-      INTERFACES_EXPORTED_STBM
-      public abstract_module
-   ,  public class_StbM_Functionality
-{
-   private:
-/******************************************************************************/
-/* OBJECTS                                                                    */
-/******************************************************************************/
-
-   public:
-      FUNC(void, STBM_CODE) InitFunction(
-         CONSTP2CONST(CfgModule_TypeAbstract, STBM_CONFIG_DATA, STBM_APPL_CONST) lptrCfgModule
-      );
-      FUNC(void, STBM_CODE) DeInitFunction (void);
-      FUNC(void, STBM_CODE) MainFunction   (void);
-      STBM_CORE_FUNCTIONALITIES
-};
-
-extern VAR(module_StbM, STBM_VAR) StbM;
 
 /******************************************************************************/
 /* CONSTS                                                                     */
