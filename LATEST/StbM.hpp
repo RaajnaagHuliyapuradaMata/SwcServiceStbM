@@ -7,6 +7,7 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
+#include "ConstStbM.hpp"
 #include "CfgStbM.hpp"
 #include "StbM_core.hpp"
 #include "infStbM_Exp.hpp"
@@ -31,13 +32,15 @@ class module_StbM:
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
+      const ConstStbM_Type* lptrConst = (ConstStbM_Type*)NULL_PTR;
 
    public:
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
       FUNC(void, STBM_CODE) InitFunction(
-         CONSTP2CONST(CfgModule_TypeAbstract, STBM_CONFIG_DATA, STBM_APPL_CONST) lptrCfgModule
+            CONSTP2CONST(ConstModule_TypeAbstract, STBM_CONST,       STBM_APPL_CONST) lptrConstModule
+         ,  CONSTP2CONST(CfgModule_TypeAbstract,   STBM_CONFIG_DATA, STBM_APPL_CONST) lptrCfgModule
       );
       FUNC(void, STBM_CODE) DeInitFunction (void);
       FUNC(void, STBM_CODE) MainFunction   (void);

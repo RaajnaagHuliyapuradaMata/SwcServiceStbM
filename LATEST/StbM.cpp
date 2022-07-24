@@ -48,7 +48,8 @@ VAR(module_StbM, STBM_VAR) StbM;
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
 FUNC(void, STBM_CODE) module_StbM::InitFunction(
-   CONSTP2CONST(CfgModule_TypeAbstract, STBM_CONFIG_DATA, STBM_APPL_CONST) lptrCfgModule
+      CONSTP2CONST(ConstModule_TypeAbstract, STBM_CONST,       STBM_APPL_CONST) lptrConstModule
+   ,  CONSTP2CONST(CfgModule_TypeAbstract,   STBM_CONFIG_DATA, STBM_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == StbM_InitCheck)
    if(
@@ -56,8 +57,12 @@ FUNC(void, STBM_CODE) module_StbM::InitFunction(
       != IsInitDone
    ){
 #endif
-      if(NULL_PTR != lptrCfgModule){
-         lptrCfg = lptrCfgModule;
+      if(
+            (NULL_PTR != lptrConstModule)
+         && (NULL_PTR != lptrCfgModule)
+      ){
+         lptrConst = lptrConstModule;
+         lptrCfg   = lptrCfgModule;
       }
       else{
 #if(STD_ON == StbM_DevErrorDetect)
