@@ -61,7 +61,7 @@ FUNC(void, STBM_CODE) module_StbM::InitFunction(
             (NULL_PTR != lptrConstModule)
          && (NULL_PTR != lptrCfgModule)
       ){
-         lptrConst = lptrConstModule;
+         lptrConst = (const ConstStbM_Type*)lptrConstModule;
          lptrCfg   = lptrCfgModule;
       }
       else{
