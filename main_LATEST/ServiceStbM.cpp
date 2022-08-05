@@ -13,18 +13,18 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define STBM_AR_RELEASE_VERSION_MAJOR                                          4
-#define STBM_AR_RELEASE_VERSION_MINOR                                          3
+#define SERVICESTBM_AR_RELEASE_VERSION_MAJOR                                          4
+#define SERVICESTBM_AR_RELEASE_VERSION_MINOR                                          3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
-#if(STBM_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
-   #error "Incompatible STBM_AR_RELEASE_VERSION_MAJOR!"
+#if(SERVICESTBM_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
+   #error "Incompatible SERVICESTBM_AR_RELEASE_VERSION_MAJOR!"
 #endif
 
-#if(STBM_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
-   #error "Incompatible STBM_AR_RELEASE_VERSION_MINOR!"
+#if(SERVICESTBM_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
+   #error "Incompatible SERVICESTBM_AR_RELEASE_VERSION_MINOR!"
 #endif
 
 /******************************************************************************/
@@ -42,14 +42,14 @@
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-VAR(module_ServiceStbM, STBM_VAR) ServiceStbM;
+VAR(module_ServiceStbM, SERVICESTBM_VAR) ServiceStbM;
 
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
-FUNC(void, STBM_CODE) module_ServiceStbM::InitFunction(
-      CONSTP2CONST(ConstModule_TypeAbstract, STBM_CONST,       STBM_APPL_CONST) lptrConstModule
-   ,  CONSTP2CONST(CfgModule_TypeAbstract,   STBM_CONFIG_DATA, STBM_APPL_CONST) lptrCfgModule
+FUNC(void, SERVICESTBM_CODE) module_ServiceStbM::InitFunction(
+      CONSTP2CONST(ConstModule_TypeAbstract, SERVICESTBM_CONST,       SERVICESTBM_APPL_CONST) lptrConstModule
+   ,  CONSTP2CONST(CfgModule_TypeAbstract,   SERVICESTBM_CONFIG_DATA, SERVICESTBM_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == ServiceStbM_InitCheck)
    if(
@@ -83,14 +83,14 @@ FUNC(void, STBM_CODE) module_ServiceStbM::InitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  STBM_E_UNINIT
+         ,  SERVICESTBM_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, STBM_CODE) module_ServiceStbM::DeInitFunction(
+FUNC(void, SERVICESTBM_CODE) module_ServiceStbM::DeInitFunction(
    void
 ){
 #if(STD_ON == ServiceStbM_InitCheck)
@@ -108,14 +108,14 @@ FUNC(void, STBM_CODE) module_ServiceStbM::DeInitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  STBM_E_UNINIT
+         ,  SERVICESTBM_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, STBM_CODE) module_ServiceStbM::MainFunction(
+FUNC(void, SERVICESTBM_CODE) module_ServiceStbM::MainFunction(
    void
 ){
 #if(STD_ON == ServiceStbM_InitCheck)
@@ -132,7 +132,7 @@ FUNC(void, STBM_CODE) module_ServiceStbM::MainFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  STBM_E_UNINIT
+         ,  SERVICESTBM_E_UNINIT
       );
 #endif
    }

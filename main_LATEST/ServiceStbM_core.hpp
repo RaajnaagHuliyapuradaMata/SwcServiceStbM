@@ -12,9 +12,9 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define STBM_CORE_FUNCTIONALITIES                                              \
+#define SERVICESTBM_CORE_FUNCTIONALITIES                                              \
 
-#define STBM_CORE_FUNCTIONALITIES_VIRTUAL                                      \
+#define SERVICESTBM_CORE_FUNCTIONALITIES_VIRTUAL                                      \
 
 /******************************************************************************/
 /* MACROS                                                                     */
@@ -25,7 +25,7 @@
 /******************************************************************************/
 class class_ServiceStbM_Functionality{
    public:
-      STBM_CORE_FUNCTIONALITIES_VIRTUAL
+      SERVICESTBM_CORE_FUNCTIONALITIES_VIRTUAL
 };
 
 /******************************************************************************/
