@@ -24,7 +24,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_ServiceStbM:
-      INTERFACES_EXMCALPORTED_SERVICESTBM
+      INTERFACES_EXPORTED_SERVICESTBM
       public abstract_module
    ,  public class_ServiceStbM_Functionality
 {
