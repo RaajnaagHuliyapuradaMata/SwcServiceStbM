@@ -1,13 +1,13 @@
 #pragma once
 /******************************************************************************/
-/* File   : ServiceStbM.hpp                                                          */
+/* File   : ServiceStbM.hpp                                                   */
 /* Author : NAGARAJA HM (c) since 1982. All rights reserved.                  */
 /******************************************************************************/
 
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "ConstServiceStbM.hpp"
+#include "infServiceStbM_ServiceNvM_Types.hpp"
 #include "CfgServiceStbM.hpp"
 #include "ServiceStbM_core.hpp"
 #include "infServiceStbM_Exp.hpp"
